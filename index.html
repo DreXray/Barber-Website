@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="sideNav.css" />
+    <script src="./toggleSidebar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -242,27 +243,5 @@
         <p>Copyright EZClips Hair Studio</p>
       </div>
     </section>
-    <script>
-      var menuBtn = document.getElementById("menuBtn");
-      var sideNav = document.getElementById("sideNav");
-      var menu = document.getElementById("menu");
-
-      sideNav.style.right == "-250px";
-
-      menuBtn.onclick = function () {
-        if (sideNav.style.right == "-250px") {
-          sideNav.style.right = "0";
-          menu.src = "images/close.png";
-        } else {
-          sideNav.style.right = "-250px";
-          menu.src = "images/menu.png";
-        }
-      };
-
-      var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 1000,
-        speedAsDuration: true,
-      });
-    </script>
   </body>
 </html>
