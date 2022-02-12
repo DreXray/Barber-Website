@@ -1,26 +1,31 @@
 // Huge gotcha: Only run this function after window has loaded
-window.onload = initializeSidebarCode;
+let sidebarIsOpen = false;
+let ICON_WHEN_OPEN = "fa-times";
+let ICON_WHEN_CLOSED = "fa-bars"
 
-
-function initializeSidebarCode() {
-  var menuBtn = document.getElementById("menuBtn");
-  var sideNav = document.getElementById("sideNav");
-  var menu = document.getElementById("menu");
-
-  sideNav.style.right == "-250px";
-
-  menuBtn.onclick = function () {
-    if (sideNav.style.right == "-250px") {
-      sideNav.style.right = "0";
-      menu.src = "images/close.png";
-    } else {
-      sideNav.style.right = "-250px";
-      menu.src = "images/menu.png";
-    }
-  };
-
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 1000,
-    speedAsDuration: true,
-  });
+function getSidebar() {
+  return document.getElementById("sideNav");
 }
+
+function getBtn() {
+  return document.getElementById("menu");
+}
+
+function openSidebar() {
+  getSidebar().classList.add("sidebar-open");
+  getBtn().classList.add(ICON_WHEN_OPEN);
+  getBtn().classList.remove(ICON_WHEN_CLOSED);
+  sidebarIsOpen = true;
+}
+
+function closeSidebar() {
+  getSidebar().classList.remove("sidebar-open");
+  getBtn().classList.add(ICON_WHEN_CLOSED);
+  getBtn().classList.remove(ICON_WHEN_OPEN);
+  sidebarIsOpen = false;
+}
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+  speedAsDuration: true,
+});

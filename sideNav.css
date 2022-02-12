@@ -16,6 +16,10 @@
   transition: 0.5s;
 }
 
+.sidebar-open {
+  right: 0px !important;
+}
+
 #menuBtn {
   width: 50px;
   height: 50px;
