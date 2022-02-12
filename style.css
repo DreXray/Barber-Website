@@ -92,11 +92,14 @@ nav ul li a{
     border-radius: 3px;
     z-index: 3;
     cursor: pointer;
+    display: grid;
+    align-content: center;
 }
-#menuBtn img{
-    width: 20px;
-    margin-top: 15px;
+
+#menu {
+    color: rgb(220, 220, 220);
 }
+
 @media screen  and (max-width: 770px){
     .banner-text h1{
         font-size: 44px;

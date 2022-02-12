@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans+Condensed:ital,wght@1,300&family=Poppins:wght@100&family=Quintessential&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <title>Document</title>
@@ -42,7 +42,7 @@
       </nav>
     </div>
     <div id="menuBtn">
-      <img src="images/menu.png" id="menu" />
+      <i class="fa fa-bars fa-2x" id="menu"></i>
     </div>
     <!--Features-->
     <section id="Features">
@@ -238,7 +238,6 @@
         <p>Copyright EZClips Hair Studio</p>
       </div>
     </section>
-
     <script>
       var menuBtn = document.getElementById("menuBtn");
       var sideNav = document.getElementById("sideNav");
@@ -255,6 +254,7 @@
           menu.src = "images/menu.png";
         }
       };
+
       var scroll = new SmoothScroll('a[href*="#"]', {
         speed: 1000,
         speedAsDuration: true,
